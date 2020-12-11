@@ -10,6 +10,7 @@ class BackOffice extends React.Component {
       price: 0,
       category: "",
     },
+    image: {},
   };
 
   updateFormField = (e) => {
@@ -114,6 +115,10 @@ class BackOffice extends React.Component {
                   value={this.state.product.category}
                   onChange={this.updateFormField}
                 />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label htmlFor="image">Image</Form.Label>
+                <Form.Control type="file" id="image" accept="image/*" />
               </Form.Group>
               <Button variant="warning" type="submit">
                 SUBMIT PRODUCT
