@@ -14,7 +14,7 @@ class SingleCard extends React.Component {
           }
         >
           <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" src={this.props.item.imageUrl} />
+            <Card.Img variant="top" src={this.props.item.image} />
             <Card.Body>
               <Card.Title>{this.props.item.name}</Card.Title>
               <Card.Text>{this.props.item.description}</Card.Text>

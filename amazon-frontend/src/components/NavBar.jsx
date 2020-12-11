@@ -7,16 +7,21 @@ import {
   FormControl,
   Button,
 } from "react-bootstrap";
+import { Link, withRouter } from "react-router-dom";
 
 class NavBar extends React.Component {
   render() {
     return (
       <Navbar expand="lg">
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Link to="/">
+          <Navbar.Brand>React-Bootstrap</Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Link to="/backoffice">
+              <span className="nav-link">Home</span>
+            </Link>
             <Nav.Link href="#link">Link</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -40,4 +45,4 @@ class NavBar extends React.Component {
   }
 }
 
-export default NavBar;
+export default withRouter(NavBar);

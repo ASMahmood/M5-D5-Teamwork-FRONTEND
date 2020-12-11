@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import NavBar from "./components/NavBar";
 import CardsList from "./components/CardsList";
+import Detail from "./components/Detail";
 import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
