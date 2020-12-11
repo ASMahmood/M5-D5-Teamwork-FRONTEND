@@ -1,11 +1,18 @@
 import React, { Component } from "react";
 import { Card, Button, Col } from "react-bootstrap";
+import { withRouter } from "react-router-dom";
 
-export default class SingleCard extends Component {
+class SingleCard extends React.Component {
   render() {
     return (
       <div>
-        <Col xs={12} className="my-3">
+        <Col
+          xs={12}
+          className="my-3"
+          onClick={() =>
+            this.props.history.push("/detail/" + this.props.item._id)
+          }
+        >
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src={this.props.item.imageUrl} />
             <Card.Body>
@@ -20,3 +27,5 @@ export default class SingleCard extends Component {
     );
   }
 }
+
+export default withRouter(SingleCard);
